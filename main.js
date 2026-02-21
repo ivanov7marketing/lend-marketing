@@ -66,30 +66,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 // INTERSECTION OBSERVER — REVEAL ANIMATIONS
 // ============================================
+function revealElement(el) {
+    if (el.classList.contains('visible')) return;
+    const siblings = el.parentElement?.querySelectorAll('.reveal, .reveal-right');
+    let delay = 0;
+    if (siblings) {
+        const arr = Array.from(siblings);
+        delay = arr.indexOf(el) * 100;
+    }
+    setTimeout(() => {
+        el.classList.add('visible');
+    }, delay);
+}
+
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            // Stagger delay for siblings
-            const siblings = entry.target.parentElement?.querySelectorAll('.reveal, .reveal-right');
-            let delay = 0;
-            if (siblings) {
-                const arr = Array.from(siblings);
-                delay = arr.indexOf(entry.target) * 100;
-            }
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, delay);
+            revealElement(entry.target);
             revealObserver.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -60px 0px'
+    threshold: 0.05,
+    rootMargin: '50px 0px -30px 0px'
 });
 
-document.querySelectorAll('.reveal, .reveal-right').forEach(el => {
+const revealElements = document.querySelectorAll('.reveal, .reveal-right');
+revealElements.forEach(el => {
     revealObserver.observe(el);
 });
+
+// Fallback: immediately reveal elements that are already in viewport
+// (IntersectionObserver may not fire for elements visible before observe())
+requestAnimationFrame(() => {
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            revealElement(el);
+            revealObserver.unobserve(el);
+        }
+    });
+});
+
+// Safety net: if hero elements are still hidden after 1.5s, force-show them
+setTimeout(() => {
+    document.querySelectorAll('#hero .reveal, #hero .reveal-right').forEach(el => {
+        el.classList.add('visible');
+    });
+}, 1500);
 
 // ============================================
 // NUMBER COUNTER ANIMATION
