@@ -1463,7 +1463,7 @@ footer {
 
 .cyber-hero {
     min-height: 100vh;
-    background-size: cover;
+    background-size: 100% 100% !important;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000000;
@@ -1492,7 +1492,7 @@ footer {
 }
 
 .cyber-h1 {
-    font-size: 5rem !important;
+    font-size: 3.5rem !important;
     line-height: 1 !important;
     letter-spacing: -2px !important;
     font-weight: 700 !important;
