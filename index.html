@@ -18,88 +18,59 @@
 <body>
     <div class="cursor-follower"></div>
 
-    <!-- HEADER -->
-    <header id="header">
+        <!-- HEADER -->
+    <header id="header" class="cyber-header">
         <nav class="container">
-            <div class="logo">
-                <span class="gradient-text">RENO</span>MARKETING
+            <div class="logo cyber-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                    <path d="M12 2L12 22M2 12L22 12" />
+                    <circle cx="12" cy="12" r="3" fill="#ffffff" />
+                </svg>
+                <span>ICONIFY</span>
             </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#cases">Кейсы</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="btn btn-sm">Обсудить проект</a></li>
+            <ul class="nav-links pill-nav" id="nav-links">
+                <li><a href="#about" class="active">ABOUT</a></li>
+                <li><a href="#cases">GALLERY</a></li>
+                <li><a href="#services">DROP</a></li>
+                <li><a href="#faq">CONNECT</a></li>
             </ul>
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">D</a>
+                    <a href="#" class="social-icon">Y</a>
+                    <a href="#" class="social-icon">I</a>
+                </div>
+                <a href="#contact" class="btn btn-pill white-btn">Learn more <span class="arrow">↗</span></a>
+            </div>
             <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
+                <span></span><span></span>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- HERO -->
-        <section id="hero">
-            <div class="hero-bg-grid"></div>
-            <div class="container hero-grid">
+                <!-- HERO -->
+        <section id="hero" class="cyber-hero" style="background-image: url('assets/images/hero_cyberpunk.png');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-grid-cyber">
                 <div class="hero-content reveal">
-                    <div class="badge">
-                        <span data-config="hero-badge">Ниша: Ремонт квартир · Топ-специалист РФ</span>
-                    </div>
-                    <h1 data-config="hero-title">Загрузим ваш отдел продаж <span class="gradient-text">горячими
-                            заявками</span> на ремонт за 14
-                        дней</h1>
-                    <p class="subtitle" data-config="hero-subtitle">Специализированный маркетинг для строительных
-                        компаний. Привлекаю клиентов на
-                        комплексный ремонт со средним чеком от 800 000 руб.</p>
+                    <h1 class="cyber-h1">The Next Era<br>of <span class="text-pink">Digital</span> <span class="sparkle">✦</span><br>Collectibles</h1>
+                    <p class="subtitle cyber-subtitle">A curated <strong>NFT collection</strong> blending<br>high-end digital art, cutting-edge<br>technology, and real cultural value.</p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary" id="cta-hero-main">
-                            <span>Получить стратегический план</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
+                        <a href="#cases" class="btn btn-primary cyber-btn-main">
+                            <span class="arrow-down">↘</span> <span>Explore the Collection</span>
                         </a>
-                        <a href="#cases" class="btn btn-outline" id="cta-hero-cases">Смотреть кейсы</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="stat-value" data-count="500">0</span><span class="stat-suffix">+</span>
-                            </div>
-                            <span class="stat-label">Заявок в месяц</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="stat-value" data-count="4.2" data-decimal="1">0</span><span
-                                    class="stat-suffix">%</span>
-                            </div>
-                            <span class="stat-label">Конверсия в замер</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="stat-value" data-count="12">0</span>
-                            </div>
-                            <span class="stat-label">Регионов РФ</span>
-                        </div>
                     </div>
                 </div>
-                <div class="hero-visual reveal-right">
-                    <div class="image-wrapper">
-                        <div class="image-glow"></div>
-                        <img src="assets/images/hero-expert.webp" alt="Эксперт по маркетингу в ремонте" id="hero-img"
-                            data-config="hero-img">
+                <div class="hero-right reveal-right">
+                    <div class="cyber-card">
+                        <div class="card-point">↘</div>
+                        <div class="card-tag">SOME FACTS</div>
+                        <h3>ABOUT THE<br>COLLECTION</h3>
+                        <p>Each piece in the collection represents a fusion<br>of art, technology, and contemporary culture.<br>Designed to stand on its own — today and<br>years from now.</p>
+                        <a href="#" class="card-link">LEARN MORE NOW <span>→</span></a>
                     </div>
                 </div>
-            </div>
-            <div class="scroll-hint">
-                <div class="scroll-mouse">
-                    <div class="scroll-dot"></div>
-                </div>
-                <span>Прокрутите вниз</span>
             </div>
         </section>
 
