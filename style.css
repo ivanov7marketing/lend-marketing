@@ -427,7 +427,7 @@ h1 {
 .stat-item {
     display: flex;
     flex-direction: column;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
 }
 
 .stat-item:first-child {
@@ -438,6 +438,12 @@ h1 {
     width: 1px;
     height: 45px;
     background: var(--border-main);
+}
+
+.stat-number {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
 }
 
 .stat-value {
@@ -1340,5 +1346,27 @@ footer {
 
     .contact-form {
         padding: 1.5rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem 0;
+    }
+
+    .stat-item {
+        padding: 0 1.2rem;
+        align-items: center;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .stat-suffix {
+        font-size: 1.5rem;
+    }
+
+    .stat-divider {
+        height: 35px;
     }
 }
