@@ -285,7 +285,13 @@ async function loadConfig() {
                             el.href = 'mailto:' + val;
                         }
                     } else if (key === 'hero-img' && el.tagName === 'IMG') {
-                        el.src = val;
+                        // Only override if it's actually customized in the admin panel to a different value.
+                        // By default, config.json has "assets/..." but Vite hashes it to "assets/hero-expert-hash.webp" in dist.
+                        // If we overwrite it with "assets/...", it breaks in production.
+                        // So we only update it if it's an external URL (http) or a user-uploaded path (not the default string).
+                        if (val && val !== 'assets/images/hero-expert.webp') {
+                            el.src = val;
+                        }
                     } else {
                         el.innerHTML = val;
                     }
