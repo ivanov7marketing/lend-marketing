@@ -61,7 +61,7 @@ app.post('/api/config', auth, (req, res) => {
 });
 
 // Protect the admin page itself via Express if navigated to directly
-app.get('/admin.html', auth, (req, res) => {
+app.get(['/admin', '/admin/', '/admin.html'], auth, (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'admin.html'));
 });
 
