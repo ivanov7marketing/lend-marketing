@@ -42,7 +42,7 @@
                 <section id="section-theme" class="config-section">
                     <h2>Тема и Цвета</h2>
                     <p class="section-desc">Настройка основных цветов и размеров шрифтов на сайте.</p>
-                    
+
                     <div class="form-grid">
                         <div class="form-group color-group">
                             <label for="theme.--primary">Основной цвет (Primary)</label>
@@ -78,11 +78,13 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="theme.--h1-font-size">Размер главного заголовка H1</label>
-                            <input type="text" id="theme.--h1-font-size" name="theme.--h1-font-size" placeholder="например, 2.35rem">
+                            <input type="text" id="theme.--h1-font-size" name="theme.--h1-font-size"
+                                placeholder="например, 2.35rem">
                         </div>
                         <div class="form-group">
                             <label for="theme.--h2-font-size">Размер заголовков H2</label>
-                            <input type="text" id="theme.--h2-font-size" name="theme.--h2-font-size" placeholder="например, 3rem">
+                            <input type="text" id="theme.--h2-font-size" name="theme.--h2-font-size"
+                                placeholder="например, 3rem">
                         </div>
                     </div>
                 </section>
@@ -93,14 +95,21 @@
                     <p class="section-desc">Тексты на первом экране сайта.</p>
 
                     <div class="form-group">
+                        <label for="content.hero-img">Путь/URL к главному изображению</label>
+                        <input type="text" id="content.hero-img" name="content.hero-img">
+                        <small>Например: assets/images/hero-expert.webp или полный http URL</small>
+                    </div>
+
+                    <div class="form-group">
                         <label for="content.hero-badge">Бейдж (метка над заголовком)</label>
                         <input type="text" id="content.hero-badge" name="content.hero-badge">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="content.hero-title">Заголовок (H1)</label>
                         <textarea id="content.hero-title" name="content.hero-title" rows="2"></textarea>
-                        <small>Можно использовать HTML-теги, например &lt;span class="gradient-text"&gt;Текст&lt;/span&gt;</small>
+                        <small>Можно использовать HTML-теги, например &lt;span
+                            class="gradient-text"&gt;Текст&lt;/span&gt;</small>
                     </div>
 
                     <div class="form-group">
