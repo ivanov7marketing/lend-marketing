@@ -1,0 +1,23 @@
+{
+    "theme": {
+        "--primary": "#2563eb",
+        "--primary-light": "#60a5fa",
+        "--primary-dark": "#1d4ed8",
+        "--bg-main": "#ffffff",
+        "--bg-secondary": "#f8fafc",
+        "--bg-card": "#ffffff",
+        "--text-main": "#0f172a",
+        "--text-muted": "#4b5563",
+        "--h1-font-size": "2.35rem",
+        "--h2-font-size": "3rem",
+        "--body-font-size": "1rem"
+    },
+    "content": {
+        "hero-badge": "Ниша: Ремонт квартир · Топ-специалист РФ",
+        "hero-title": "Загрузим ваш отдел продаж <span class=\"gradient-text\">горячими заявками</span> на ремонт за 14 дней",
+        "hero-subtitle": "Специализированный маркетинг для строительных компаний. Привлекаю клиентов на комплексный ремонт со средним чеком от 800 000 руб.",
+        "phone": "+7 (900) 123-45-67",
+        "email": "hello@renomarketing.ru",
+        "hero-img": "assets/images/hero-expert.webp"
+    }
+}

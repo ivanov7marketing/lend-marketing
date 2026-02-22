@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление сайтом | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="gradient-text">RENO</span> ADMIN
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#section-theme" class="active">Тема и Цвета</a>
+                <a href="#section-hero">Главный экран</a>
+                <a href="#section-contacts">Контакты</a>
+                <div class="spacer"></div>
+                <a href="/" target="_blank" class="view-site">Открыть сайт &rarr;</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Настройки контента</h1>
+                <div class="actions">
+                    <span id="save-status" class="status-msg"></span>
+                    <button id="save-btn" class="btn btn-primary">Сохранить изменения</button>
+                </div>
+            </header>
+
+            <form id="config-form" class="config-form">
+                <!-- Theme Settings -->
+                <section id="section-theme" class="config-section">
+                    <h2>Тема и Цвета</h2>
+                    <p class="section-desc">Настройка основных цветов и размеров шрифтов на сайте.</p>
+
+                    <div class="form-grid">
+                        <div class="form-group color-group">
+                            <label for="theme.--primary">Основной цвет (Primary)</label>
+                            <input type="color" id="theme.--primary" name="theme.--primary">
+                            <input type="text" class="color-text" name="theme.--primary-text" readonly>
+                        </div>
+                        <div class="form-group color-group">
+                            <label for="theme.--primary-light">Светлый акцент (Primary Light)</label>
+                            <input type="color" id="theme.--primary-light" name="theme.--primary-light">
+                            <input type="text" class="color-text" name="theme.--primary-light-text" readonly>
+                        </div>
+                        <div class="form-group color-group">
+                            <label for="theme.--primary-dark">Тёмный акцент (Primary Dark)</label>
+                            <input type="color" id="theme.--primary-dark" name="theme.--primary-dark">
+                            <input type="text" class="color-text" name="theme.--primary-dark-text" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group color-group">
+                            <label for="theme.--bg-main">Цвет фона</label>
+                            <input type="color" id="theme.--bg-main" name="theme.--bg-main">
+                            <input type="text" class="color-text" name="theme.--bg-main-text" readonly>
+                        </div>
+                        <div class="form-group color-group">
+                            <label for="theme.--bg-secondary">Вторичный фон</label>
+                            <input type="color" id="theme.--bg-secondary" name="theme.--bg-secondary">
+                            <input type="text" class="color-text" name="theme.--bg-secondary-text" readonly>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">Типографика</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="theme.--h1-font-size">Размер главного заголовка H1</label>
+                            <input type="text" id="theme.--h1-font-size" name="theme.--h1-font-size"
+                                placeholder="например, 2.35rem">
+                        </div>
+                        <div class="form-group">
+                            <label for="theme.--h2-font-size">Размер заголовков H2</label>
+                            <input type="text" id="theme.--h2-font-size" name="theme.--h2-font-size"
+                                placeholder="например, 3rem">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hero Settings -->
+                <section id="section-hero" class="config-section">
+                    <h2>Главный экран</h2>
+                    <p class="section-desc">Тексты на первом экране сайта.</p>
+
+                    <div class="form-group">
+                        <label for="content.hero-img">Путь/URL к главному изображению</label>
+                        <input type="text" id="content.hero-img" name="content.hero-img">
+                        <small>Например: assets/images/hero-expert.webp или полный http URL</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content.hero-badge">Бейдж (метка над заголовком)</label>
+                        <input type="text" id="content.hero-badge" name="content.hero-badge">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content.hero-title">Заголовок (H1)</label>
+                        <textarea id="content.hero-title" name="content.hero-title" rows="2"></textarea>
+                        <small>Можно использовать HTML-теги, например &lt;span
+                            class="gradient-text"&gt;Текст&lt;/span&gt;</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content.hero-subtitle">Подзаголовок</label>
+                        <textarea id="content.hero-subtitle" name="content.hero-subtitle" rows="3"></textarea>
+                    </div>
+                </section>
+
+                <!-- Contacts -->
+                <section id="section-contacts" class="config-section">
+                    <h2>Контакты</h2>
+                    <p class="section-desc">Контактные данные в подвале и шапке.</p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="content.phone">Телефон</label>
+                            <input type="text" id="content.phone" name="content.phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="content.email">Email</label>
+                            <input type="email" id="content.email" name="content.email">
+                        </div>
+                    </div>
+                </section>
+
+            </form>
+        </main>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>

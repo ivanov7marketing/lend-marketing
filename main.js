@@ -249,3 +249,52 @@ if (phoneInput) {
         this.value = masked;
     });
 }
+
+// ============================================
+// DYNAMIC CONFIGURATION (ADMIN PANEL)
+// ============================================
+async function loadConfig() {
+    try {
+        const res = await fetch('/api/config');
+        if (!res.ok) return;
+        const config = await res.json();
+
+        // Apply theme variables
+        if (config.theme) {
+            for (const [key, value] of Object.entries(config.theme)) {
+                if (value) {
+                    document.documentElement.style.setProperty(key, value);
+                }
+            }
+        }
+
+        // Apply content
+        if (config.content) {
+            document.querySelectorAll('[data-config]').forEach(el => {
+                const key = el.getAttribute('data-config');
+                const val = config.content[key];
+                if (val !== undefined && val !== null) {
+                    if (key === 'phone') {
+                        el.textContent = val;
+                        if (el.tagName === 'A') {
+                            el.href = 'tel:' + val.replace(/[^\\d+]/g, '');
+                        }
+                    } else if (key === 'email') {
+                        el.textContent = val;
+                        if (el.tagName === 'A') {
+                            el.href = 'mailto:' + val;
+                        }
+                    } else if (key === 'hero-img' && el.tagName === 'IMG') {
+                        el.src = val;
+                    } else {
+                        el.innerHTML = val;
+                    }
+                }
+            });
+        }
+    } catch (err) {
+        console.error('Failed to load dynamic config:', err);
+    }
+}
+
+loadConfig();
