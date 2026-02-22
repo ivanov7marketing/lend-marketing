@@ -1,4 +1,9 @@
 // ============================================
+// JS READY TRIGGER
+// ============================================
+document.documentElement.classList.add('js-ready');
+
+// ============================================
 // MOBILE MENU TOGGLE
 // ============================================
 const menuToggle = document.getElementById('menu-toggle');
@@ -212,13 +217,13 @@ if (form) {
 
         setTimeout(() => {
             span.textContent = '✓ Заявка принята!';
-            btn.style.background = 'linear-gradient(135deg, #4caf50, #81c784)';
+            btn.classList.add('btn-success');
             form.reset();
 
             setTimeout(() => {
                 btn.disabled = false;
                 span.textContent = originalText;
-                btn.style.background = '';
+                btn.classList.remove('btn-success');
             }, 4000);
         }, 1500);
     });
