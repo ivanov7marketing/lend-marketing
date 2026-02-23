@@ -51,6 +51,13 @@
     <main>
         <!-- HERO -->
         <section id="hero" class="cyber-hero" style="background-image: url('assets/images/hero_cyberpunk_new.png');">
+            <div class="hero-decoration">
+                <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                    <path class="dec-line" d="M0,200 Q500,100 1000,200" stroke="rgba(255,0,102,0.1)" />
+                    <path class="dec-line" d="M0,400 Q500,300 1000,400" stroke="rgba(255,0,102,0.05)" />
+                    <path class="dec-line" d="M0,600 Q500,500 1000,600" stroke="rgba(255,0,102,0.1)" />
+                </svg>
+            </div>
             <div class="hero-overlay"></div>
             <div class="container hero-grid-cyber">
                 <div class="hero-content reveal">
@@ -192,25 +199,48 @@
                 <div class="about-content">
                     <div class="features-grid">
                         <div class="feature-card reveal">
-                            <div class="icon">🎯</div>
+                            <div class="icon">
+                                <svg class="svg-icon animate-draw" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                            </div>
                             <h3>Узкая специализация</h3>
                             <p>Я знаю боли клиента, который ищет ремонт. Отсекаю «халявщиков» ещё на этапе объявления,
                                 чтобы в воронку попадали только платёжеспособные.</p>
                         </div>
                         <div class="feature-card reveal">
-                            <div class="icon">⚙️</div>
+                            <div class="icon">
+                                <svg class="svg-icon rotate-part" viewBox="0 0 24 24">
+                                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z" />
+                                </svg>
+                            </div>
                             <h3>Готовые связки</h3>
                             <p>Не трачу ваш бюджет на слепые тесты. Запускаю то, что уже доказало эффективность в 12
                                 регионах — результат виден уже на первой неделе.</p>
                         </div>
                         <div class="feature-card reveal">
-                            <div class="icon">📊</div>
+                            <div class="icon">
+                                <svg class="svg-icon animate-float" viewBox="0 0 24 24">
+                                    <path d="M18 20V10" />
+                                    <path d="M12 20V4" />
+                                    <path d="M6 20v-6" />
+                                </svg>
+                            </div>
                             <h3>Сквозная аналитика</h3>
                             <p>Вы видите не просто клики, а реальную стоимость договора и окупаемость маркетинга. Полная
                                 прозрачность на каждом этапе воронки.</p>
                         </div>
                         <div class="feature-card reveal">
-                            <div class="icon">🤝</div>
+                            <div class="icon">
+                                <svg class="svg-icon animate-pulse-glitch" viewBox="0 0 24 24">
+                                    <path d="M12 2L3 7v9c0 5 9 8 9 8s9-3 9-8V7l-9-5z" />
+                                    <path d="m9 12 2 2 4-4" stroke="#fff" />
+                                </svg>
+                            </div>
                             <h3>Гарантия в договоре</h3>
                             <p>Фиксирую KPI: количество заявок и CPL. Если план не выполнен — продолжаю работу бесплатно
                                 до достижения нужных показателей.</p>
@@ -230,7 +260,13 @@
             <div class="services-grid">
                 <div class="service-card reveal">
                     <div class="service-card-top">
-                        <div class="s-icon">🎯</div>
+                        <div class="s-icon">
+                            <svg class="svg-icon animate-draw" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="m12 8 4 4-4 4" />
+                                <path d="M8 12h8" />
+                            </svg>
+                        </div>
                         <div class="service-tag">Самый популярный</div>
                     </div>
                     <h3>Контекстная реклама</h3>
@@ -244,7 +280,12 @@
                 </div>
                 <div class="service-card reveal">
                     <div class="service-card-top">
-                        <div class="s-icon">📱</div>
+                        <div class="s-icon">
+                            <svg class="svg-icon animate-float" viewBox="0 0 24 24">
+                                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                                <path d="M12 18h.01" />
+                            </svg>
+                        </div>
                     </div>
                     <h3>Таргетированная реклама</h3>
                     <p>Привлечение клиентов из соцсетей через лид-формы и экспертные статьи. Идеально для ЖК и
@@ -257,7 +298,12 @@
                 </div>
                 <div class="service-card reveal">
                     <div class="service-card-top">
-                        <div class="s-icon">🧩</div>
+                        <div class="s-icon">
+                            <svg class="svg-icon rotate-part" viewBox="0 0 24 24">
+                                <path d="M12 2v8l4-4M12 10l-4-4" />
+                                <circle cx="12" cy="17" r="5" />
+                            </svg>
+                        </div>
                     </div>
                     <h3>Архитектура воронки</h3>
                     <p>Создание квиз-сайтов, посадочных страниц и чат-ботов, которые прогревают клиента до звонка.</p>
@@ -269,7 +315,13 @@
                 </div>
                 <div class="service-card reveal">
                     <div class="service-card-top">
-                        <div class="s-icon">📈</div>
+                        <div class="s-icon">
+                            <svg class="svg-icon animate-draw" viewBox="0 0 24 24">
+                                <path d="m3 3 18 18" />
+                                <path d="M21 8v13h-13" />
+                                <path d="m9 21 3-3 4 4 5-5" />
+                            </svg>
+                        </div>
                     </div>
                     <h3>CRM & Аналитика</h3>
                     <p>Внедрение сквозной аналитики и настройка CRM для полного контроля работы отдела продаж.</p>
@@ -295,6 +347,12 @@
                         <div class="step-num-wrap">
                             <div class="step-num">01</div>
                         </div>
+                        <div class="step-icon">
+                            <svg class="svg-icon animate-float" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="m21 21-4.3-4.3" />
+                            </svg>
+                        </div>
                         <h4>Аудит и стратегия</h4>
                         <p>Анализирую конкурентов, ваши текущие показатели и формирую детальный медиаплан.</p>
                     </div>
@@ -302,6 +360,12 @@
                         <div class="step-line"></div>
                         <div class="step-num-wrap">
                             <div class="step-num">02</div>
+                        </div>
+                        <div class="step-icon">
+                            <svg class="svg-icon rotate-part" viewBox="0 0 24 24">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
                         </div>
                         <h4>Подготовка базы</h4>
                         <p>Создаю офферы, посадочные страницы и настраиваю системы аналитики и ColTrekking.</p>
@@ -311,12 +375,24 @@
                         <div class="step-num-wrap">
                             <div class="step-num">03</div>
                         </div>
+                        <div class="step-icon">
+                            <svg class="svg-icon animate-pulse-glitch" viewBox="0 0 24 24">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
                         <h4>Запуск и тест</h4>
                         <p>Запуск первых кампаний, сбор данных, оперативная корректировка ставок и объявлений.</p>
                     </div>
                     <div class="step reveal">
                         <div class="step-num-wrap">
                             <div class="step-num">04</div>
+                        </div>
+                        <div class="step-icon">
+                            <svg class="svg-icon animate-draw" viewBox="0 0 24 24">
+                                <path d="m3 3 18 18" />
+                                <path d="M21 8v13h-13" />
+                                <path d="m9 21 3-3 4 4 5-5" />
+                            </svg>
                         </div>
                         <h4>Масштабирование</h4>
                         <p>Увеличение бюджета на самые эффективные связки для максимизации прибыли.</p>
