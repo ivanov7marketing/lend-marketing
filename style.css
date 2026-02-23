@@ -299,13 +299,13 @@ nav {
 .section-tag {
     display: inline-block;
     padding: 0.5rem 1.4rem;
-    background: rgba(37, 99, 235, 0.05);
-    border: 1px solid var(--border-primary);
-    color: var(--primary);
-    border-radius: 50px;
+    background: rgba(255, 0, 102, 0.05);
+    border: 1px solid rgba(255, 0, 102, 0.3);
+    color: #ff0066;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
 }
@@ -619,10 +619,11 @@ h1 {
    TRUST BAR
    ============================================ */
 #trust-bar {
-    padding: 3rem 0;
-    border-top: 1px solid var(--border-glass);
-    border-bottom: 1px solid var(--border-glass);
-    background: var(--bg-secondary);
+    padding: 3.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 10, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .trust-inner {
@@ -680,12 +681,13 @@ h1 {
 }
 
 .case-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-main);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 .case-card:hover {
@@ -715,14 +717,16 @@ h1 {
     position: absolute;
     top: 1.2rem;
     right: 1.2rem;
-    background: rgba(32, 38, 50, 0.9);
+    background: rgba(255, 0, 102, 0.8);
     backdrop-filter: blur(10px);
     padding: 0.45rem 1rem;
-    border-radius: 50px;
+    border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--text-main);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 15px rgba(255, 0, 102, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .case-body {
@@ -804,11 +808,11 @@ h1 {
     position: absolute;
     bottom: -1.5rem;
     right: -1.5rem;
-    background: var(--accent-gradient);
-    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #ff0066 0%, #ff3399 100%);
+    border-radius: 4px;
     padding: 1.4rem 2rem;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 15px 35px rgba(255, 0, 102, 0.3);
 }
 
 .about-exp-badge strong {
@@ -833,12 +837,29 @@ h1 {
 }
 
 .feature-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-main);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     border-radius: var(--radius-md);
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: #ff0066;
+    transition: height 0.4s ease;
+}
+
+.feature-card:hover::before {
+    height: 100%;
 }
 
 .feature-card:hover {
@@ -878,15 +899,30 @@ h1 {
 }
 
 .service-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-main);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 3rem;
     border-radius: var(--radius-lg);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 0, 102, 0.3), transparent 40%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .service-card:hover {
@@ -967,34 +1003,37 @@ h1 {
 }
 
 .step-num {
-    width: 80px;
-    height: 80px;
-    background: var(--bg-card);
-    border: 2px solid var(--primary);
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    border: 1px solid #ff0066;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
-    color: var(--primary);
+    color: #ff0066;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.2);
     z-index: 1;
 }
 
 .step h4 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .step p {
-    color: var(--text-muted);
-    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
 }
 
 /* ============================================
@@ -1011,15 +1050,16 @@ h1 {
 }
 
 .testimonial-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-main);
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--radius-lg);
     padding: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .testimonial-card:hover {
@@ -1070,17 +1110,18 @@ h1 {
 }
 
 .faq-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border-main);
-    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
     margin-bottom: 1rem;
     transition: var(--transition);
     overflow: hidden;
 }
 
 .faq-item.active {
-    border-color: var(--primary);
-    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 0, 102, 0.5);
+    background: rgba(255, 0, 102, 0.02);
+    box-shadow: 0 10px 30px rgba(255, 0, 102, 0.1);
 }
 
 .faq-question {
@@ -1188,8 +1229,9 @@ h1 {
    ============================================ */
 footer {
     padding: 5rem 0 3rem;
-    background: var(--text-main);
-    color: var(--text-main);
+    background: #050505;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-left .logo {
