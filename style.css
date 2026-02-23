@@ -1590,7 +1590,7 @@ footer {
 }
 
 .cyber-h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-size: clamp(2rem, 4vw, 3.2rem) !important;
     line-height: 1.1 !important;
     letter-spacing: -1px !important;
     font-weight: 800 !important;
